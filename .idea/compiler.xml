@@ -6,11 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Revolut" />
+        <module name="RBT-MoneyTransfer" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Revolut" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
