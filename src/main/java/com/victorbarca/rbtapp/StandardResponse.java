@@ -12,4 +12,12 @@ public class StandardResponse {
         this.status = status;
         this.data = data;
     }
+
+    public StandardResponse(String status) {
+        this.status = status;
+    }
+    public StandardResponse(String status, String message) {
+        this.status = status;
+        this.message = message;
+    }
 }

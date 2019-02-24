@@ -1,5 +1,6 @@
 package com.victorbarca.rbtapp.services;
 
+import com.victorbarca.rbtapp.data.Account;
 import com.victorbarca.rbtapp.data.User;
 
 public interface IUsersService {
@@ -10,4 +11,5 @@ public interface IUsersService {
     public void deleteUser(String userId);
 
     public void updateUser(User user);
+
 }
