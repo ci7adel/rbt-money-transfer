@@ -1,19 +1,19 @@
 package com.victorbarca.rbtapp.data;
 
 public class User {
-    private String userId;
+    private Integer userId;
     private String name;
 
-    public User(String id, String name) {
-        this.userId = id;
+    public User(Integer userId, String name) {
+        this.userId = userId;
         this.name = name;
     }
 
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 

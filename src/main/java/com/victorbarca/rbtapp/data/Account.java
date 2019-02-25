@@ -3,35 +3,36 @@ package com.victorbarca.rbtapp.data;
 import java.math.BigDecimal;
 
 public class Account {
-    private String accountId;
-    private String accountNumber;
+    private Integer accountId;
+    private Integer userId;
     private BigDecimal balance;
-    private BigDecimal blockeddBalance;
 
-    public Account(String accountId, String accountNumber, BigDecimal balance) {
+    public Account(Integer accountId,Integer userId, BigDecimal balance) {
         this.accountId = accountId;
-        this.accountNumber = accountNumber;
+        this.userId = userId;
         this.balance = balance;
-        this.blockeddBalance = BigDecimal.ZERO;
     }
 
-    public String getAccountId() {
+    public Integer getAccountId() {
         return accountId;
     }
 
-    public void setAccountId(String accountId) {
+    public void setAccountId(Integer accountId) {
         this.accountId = accountId;
     }
 
-    public String getAccountNumber() {
-        return accountNumber;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setAccountNumber(String accountNumber) {
-        this.accountNumber = accountNumber;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
-    public BigDecimal getBalance() {
+    public synchronized BigDecimal getBalance() {
+//        try {
+//            Thread.sleep(10000);
+//        } catch (Exception e) {}
         return balance;
     }
 
@@ -39,15 +40,18 @@ public class Account {
         this.balance = balance;
     }
 
-    public BigDecimal getBlockeddBalance() {
-        return blockeddBalance;
-    }
-
-    public void setBlockeddBalance(BigDecimal blockeddBalance) {
-        this.blockeddBalance = blockeddBalance;
-    }
-
     public void substractAmount(BigDecimal amount) {
+        try {
+            System.out.println(Thread.currentThread().getName() +" "+this.accountId + " sleep");
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         this.balance = this.balance.subtract(amount);
+        System.out.println(Thread.currentThread().getName() +" "+this.accountId + " finnish");
+    }
+
+    public void addAmount(BigDecimal amount) {
+        this.balance = this.balance.add(amount);
     }
 }

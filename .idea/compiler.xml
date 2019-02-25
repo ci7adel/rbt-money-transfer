@@ -9,5 +9,8 @@
         <module name="RBT-MoneyTransfer" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="RevolutBackendTest" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

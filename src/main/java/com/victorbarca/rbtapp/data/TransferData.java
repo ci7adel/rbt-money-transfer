@@ -2,8 +2,8 @@ package com.victorbarca.rbtapp.data;
 
 import java.math.BigDecimal;
 
-public class Transaction {
-    public String accountIdFrom;
-    public String accountIdTo;
+public class TransferData {
+    public Integer accountIdFrom;
+    public Integer accountIdTo;
     public BigDecimal amount;
 }
