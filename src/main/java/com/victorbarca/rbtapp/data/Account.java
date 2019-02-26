@@ -31,18 +31,11 @@ public class Account {
         this.userId = userId;
     }
 
-    public synchronized BigDecimal getBalance() {
-//        try {
-//            Thread.sleep(10000);
-//        } catch (Exception e) {}
-        return balance;
+    public BigDecimal getBalance() {
+        return this.balance;
     }
-
     public void setBalance(BigDecimal balance) {
         this.balance = balance;
     }
 
-    public void addAmount(BigDecimal amount) {
-        this.balance = this.balance.add(amount);
-    }
 }

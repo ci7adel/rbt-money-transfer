@@ -6,7 +6,7 @@ package com.victorbarca.rbtapp;
 import com.google.gson.Gson;
 
 import com.victorbarca.rbtapp.controllers.AccountController;
-import com.victorbarca.rbtapp.controllers.TestController;
+import com.victorbarca.rbtapp.controllers.UserController;
 import com.victorbarca.rbtapp.data.Account;
 import com.victorbarca.rbtapp.data.StandardResponse;
 import com.victorbarca.rbtapp.data.TransferData;
@@ -24,43 +24,99 @@ public class Main {
     public static void main (String[] args) {
         port(8080);
         // Dependencies Todo: dependency injector
-        UserService userService = new UserService();
+//        UserService userService = new UserService();
 //        AccountService accountService = new AccountService();
+        UserController userController = new UserController();
+        AccountController accountController = new AccountController(userController);
 
-        AccountController accountController = new AccountController();
 
-        TestController testController = new TestController();
-
-        // Get User
+        // Get Server status
         get("/", (request, response) -> {
             response.type("text/html");
             return "<html><body>RBT-API up and running...</body></html>";
         });
 
+        // Create User
+        post("/users", (request, response) -> {
+            try{
+                response.type("application/json");
+                User user = new Gson().fromJson(request.body(), User.class);
+                userController.createUser(user);
+                response.status(201);
+                return new Gson().toJson(new StandardResponse("SUCCESS", new Gson().toJsonTree(userController.getUser(user.getUserId()))));
+            } catch (Exception e) {
+                response.status(500);
+                return new Gson().toJson(new StandardResponse("ERROR", e.getMessage()));
+            }
+        });
 
         // Get User
         get("/users/:id", (request, response) -> {
-            response.type("application/json");
-            return new Gson().toJson(
-                    new StandardResponse("SUCCESS", new Gson()
-                            .toJsonTree(userService.getUser(request.params(":id")))));
+            try{
+                response.type("application/json");
+                return new Gson().toJson(
+                        new StandardResponse("SUCCESS", new Gson()
+                                .toJsonTree(userController.getUser(Integer.valueOf(request.params(":id"))))));
+            } catch (Exception e) {
+                response.status(500);
+                return new Gson().toJson(new StandardResponse("ERROR", e.getMessage()));
+            }
         });
 
-        // Create User
-        post("/users", (request, response) -> {
-            response.type("application/json");
-            User user = new Gson().fromJson(request.body(), User.class);
-            userService.createUser(user);
-            response.status(201);
-            return new Gson().toJson(new StandardResponse("SUCCESS"));
+
+
+        // Get all users
+        get("/users", (request, response) -> {
+            try{
+                response.type("application/json");
+                return new Gson().toJson(
+                        new StandardResponse("SUCCESS", new Gson()
+                                .toJsonTree(userController.getUsers())));
+            } catch (Exception e) {
+                response.status(500);
+                return new Gson().toJson(new StandardResponse("ERROR", e.getMessage()));
+            }
         });
 
-        // Get all Accounts
-        get("/accounts", (request, response) -> {
+        // Update users
+        put("/users", (request, response) -> {
+            try{
+                System.out.println(Thread.currentThread().getName()+" put /users");
+                response.type("application/json");
+                User user = new Gson().fromJson(request.body(), User.class);
+                userController.updateUser(user);
+                return new Gson().toJson(new StandardResponse("SUCCESS", new Gson().toJsonTree(accountController.getAccount(user.getUserId()))));
+            } catch (Exception e) {
+                response.status(500);
+                return new Gson().toJson(new StandardResponse("ERROR", e.getMessage()));
+            }
+        });
+
+        // Delete User
+        delete("/users/:id", (request, response) -> {
             response.type("application/json");
-            return new Gson().toJson(
-                    new StandardResponse("SUCCESS", new Gson()
-                            .toJsonTree(accountController.getAccounts())));
+            try{
+                userController.deleteUser(Integer.valueOf(request.params(":id")));
+                return new Gson().toJson(new StandardResponse("SUCCESS"));
+            } catch (Exception e) {
+                response.status(404); //Todo: check if really not found
+                return new Gson().toJson(new StandardResponse("ERROR", e.getMessage()));
+            }
+        });
+
+
+        // Create Account
+        post("/accounts", (request, response) -> {
+            try{
+                response.type("application/json");
+                Account account = new Gson().fromJson(request.body(), Account.class);
+                accountController.createAccount(account);
+                response.status(201);
+                return new Gson().toJson(new StandardResponse("SUCCESS", new Gson().toJsonTree(accountController.getAccount(account.getAccountId()))));
+            } catch (Exception e) {
+                response.status(500);
+                return new Gson().toJson(new StandardResponse("ERROR", e.getMessage()));
+            }
         });
 
         // Get Account
@@ -72,6 +128,19 @@ public class Main {
                                 .toJsonTree(accountController.getAccount(Integer.valueOf(request.params(":id"))))));
             } catch (Exception e) {
                 response.status(404); // Not Found Todo: be sure is not found
+                return new Gson().toJson(new StandardResponse("ERROR", e.getMessage()));
+            }
+        });
+
+        // Get all Accounts
+        get("/accounts", (request, response) -> {
+            try{
+                response.type("application/json");
+                return new Gson().toJson(
+                        new StandardResponse("SUCCESS", new Gson()
+                                .toJsonTree(accountController.getAccounts())));
+            } catch (Exception e) {
+                response.status(500);
                 return new Gson().toJson(new StandardResponse("ERROR", e.getMessage()));
             }
         });
@@ -88,22 +157,31 @@ public class Main {
             }
         });
 
-        // Create Account
-        post("/accounts", (request, response) -> {
-            response.type("application/json");
-            Account account = new Gson().fromJson(request.body(), Account.class);
-            accountController.createAccount(account);
-            response.status(201);
-            return new Gson().toJson(new StandardResponse("SUCCESS", new Gson().toJsonTree(accountController.getAccount(account.getAccountId()))));
+        // Update account
+        put("/accounts", (request, response) -> {
+            try{
+                System.out.println(Thread.currentThread().getName()+" put /accounts");
+                response.type("application/json");
+                Account account = new Gson().fromJson(request.body(), Account.class);
+                accountController.updateAccount(account);
+                return new Gson().toJson(new StandardResponse("SUCCESS", new Gson().toJsonTree(accountController.getAccount(account.getAccountId()))));
+            } catch (Exception e) {
+                response.status(500);
+                return new Gson().toJson(new StandardResponse("ERROR", e.getMessage()));
+            }
         });
 
         // Deposit account
         put("/accounts/:accountId/deposit/:amount", (request, response) -> {
-            System.out.println(Thread.currentThread().getName()+" put /accounts/:accountId/deposit/:amount");
-            response.type("application/json");
-            accountController.deposit(Integer.valueOf(request.params(":accountId")), new BigDecimal(request.params(":amount")));
-
-            return new Gson().toJson(new StandardResponse("SUCCESS", new Gson().toJsonTree(accountController.getAccount(Integer.valueOf(request.params(":accountId"))))));
+            try{
+                System.out.println(Thread.currentThread().getName()+" put /accounts/:accountId/deposit/:amount");
+                response.type("application/json");
+                accountController.deposit(Integer.valueOf(request.params(":accountId")), new BigDecimal(request.params(":amount")));
+                return new Gson().toJson(new StandardResponse("SUCCESS", new Gson().toJsonTree(accountController.getAccount(Integer.valueOf(request.params(":accountId"))))));
+            } catch (Exception e) {
+                response.status(500);
+                return new Gson().toJson(new StandardResponse("ERROR", e.getMessage()));
+            }
         });
 
         // Make transfer
@@ -121,13 +199,6 @@ public class Main {
                 return new Gson().toJson(new StandardResponse("ERROR", e.getMessage()));
             }
         });
-
-//        get("/tests/1", (request, response) -> {
-//            response.type("application/json");
-//
-//            return new Gson().toJson(new StandardResponse("SUCCESS"));
-//        });
-
 
     }
 }

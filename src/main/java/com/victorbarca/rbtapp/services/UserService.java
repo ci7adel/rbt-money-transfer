@@ -1,32 +1,43 @@
 package com.victorbarca.rbtapp.services;
 
+import com.victorbarca.rbtapp.data.DataBase;
 import com.victorbarca.rbtapp.data.User;
 
-import java.util.HashMap;
+import java.util.Collection;
 
 public class UserService implements IUsersService{
-    private HashMap<Integer, User> users;
+    private DataBase dataBase;
 
     public UserService() {
-        this.users = new HashMap<>();
-        this.users.put(1,new User(1,"Victor"));
+        this.dataBase = DataBase.getInstance();
     }
 
     @Override
-    public User getUser(String userId) {
-        return users.getOrDefault(userId, null);
+    public User getUser(Integer userId) {
+        return dataBase.users.getOrDefault(userId, null);
     }
 
     @Override
-    public void createUser(User user) throws Exception {
-        if(!this.users.containsKey(user.getUserId())) {
-            this.users.put(user.getUserId(), user);
-        }else throw new Exception("User id already exists");
+    public void createUser(User user) {
+        dataBase.users.put(user.getUserId(), user);
     }
 
     @Override
-    public void deleteUser(String userId) {}
+    public void deleteUser(Integer userId) {
+        dataBase.users.remove(userId);
+    }
 
     @Override
-    public void updateUser(User user) {}
+    public void updateUser(User user) {
+        dataBase.users.put(user.getUserId(), user);
+    }
+
+    public boolean userExists(Integer userId) {
+        return dataBase.users.containsKey(userId);
+    }
+
+    @Override
+    public Collection<User> getUsers() {
+        return dataBase.users.values();
+    }
 }

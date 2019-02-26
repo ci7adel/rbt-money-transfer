@@ -1,15 +1,17 @@
 package com.victorbarca.rbtapp.services;
 
-import com.victorbarca.rbtapp.data.Account;
 import com.victorbarca.rbtapp.data.User;
 
+import java.util.Collection;
+
 public interface IUsersService {
-    public User getUser(String userId);
+    User getUser(Integer userId);
 
-    public void createUser(User user) throws Exception;
+    void createUser(User user) throws Exception;
 
-    public void deleteUser(String userId);
+    void deleteUser(Integer userId);
 
-    public void updateUser(User user);
+    void updateUser(User user);
 
+    Collection<User> getUsers();
 }

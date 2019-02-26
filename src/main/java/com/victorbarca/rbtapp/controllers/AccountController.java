@@ -11,9 +11,10 @@ import java.util.Objects;
 public class AccountController {
 
     private AccountService accountService = new AccountService();
+    private UserController userController;
 
-    public AccountController() {
-
+    public AccountController(UserController userController) {
+        this.userController = userController;
     }
 
     public Account getAccount(Integer accountId) throws Exception {
@@ -22,9 +23,17 @@ public class AccountController {
         else throw new Exception("Account not found");
     }
 
-    public void createAccount(Account account) {
-        account.setBalance(BigDecimal.ZERO); // Account balance just created must be 0
-        this.accountService.createAccount(account);
+    /*
+    To create an account an existing user must be provided
+    and by default the account has no balance
+     */
+    public void createAccount(Account account) throws Exception {
+        if(!accountService.accountExists(account.getAccountId())) {
+            if (userController.userExists(account.getUserId())) {
+                account.setBalance(BigDecimal.ZERO);
+                this.accountService.createAccount(account);
+            }else throw new Exception("User ID not exists");
+        }else throw new Exception("Account ID already exists");
     }
 
     public void deleteAccount(Integer accountId) throws Exception {
@@ -33,7 +42,11 @@ public class AccountController {
         else throw new Exception("Account not found");
     }
 
-    public void updateAccount(Account account) {}
+    public void updateAccount(Account account) throws Exception {
+        if (accountService.accountExists(account.getAccountId()))
+            this.accountService.updateAccount(account);
+        else throw new Exception("Account not found");
+    }
 
     public BigDecimal getBalance(Integer accountId) {
         if (accountService.accountExists(accountId))
