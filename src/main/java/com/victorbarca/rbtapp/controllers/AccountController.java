@@ -60,14 +60,14 @@ public class AccountController {
                 try {
                     Account account1 = transferData.accountIdFrom < transferData.accountIdTo ? accountService.getAccount(transferData.accountIdFrom) : accountService.getAccount(transferData.accountIdTo);
                     Account account2 = transferData.accountIdFrom < transferData.accountIdTo ? accountService.getAccount(transferData.accountIdTo) : accountService.getAccount(transferData.accountIdFrom);
-                    System.out.println(Thread.currentThread().getName() + " Locking account 1....");
+                    System.out.println(Thread.currentThread().getName() + " locking account 1....");
                     synchronized (account1) {
                         System.out.println(Thread.currentThread().getName() + " account 1 LOCKED");
-                        System.out.println(Thread.currentThread().getName() + " Locking account 2....");
+                        System.out.println(Thread.currentThread().getName() + " locking account 2....");
                         synchronized (account2) {
                             System.out.println(Thread.currentThread().getName() + " account 2 LOCKED");
                             this.withdraw(transferData.accountIdFrom, transferData.amount);
-                            //Thread.sleep(10000); // To simulate sending money
+                            Thread.sleep(1000); // To simulate sending money
                             this.deposit(transferData.accountIdTo, transferData.amount);
                             System.out.println(Thread.currentThread().getName() + " Transfer successful. " +
                                     "Balance account " + transferData.accountIdFrom + ": " + getBalance(transferData.accountIdFrom) +

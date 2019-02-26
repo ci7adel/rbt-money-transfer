@@ -1,12 +1,10 @@
 package com.victorbarca.rbtapp.services;
 
 import com.victorbarca.rbtapp.data.Account;
-import com.victorbarca.rbtapp.data.TransferData;
 
 import java.math.BigDecimal;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.Objects;
 
 public class AccountService implements IAccountService {
 
@@ -14,9 +12,10 @@ public class AccountService implements IAccountService {
 
     public AccountService() {
         this.accounts = new HashMap<>();
-        accounts.put(1, new Account(1,1, BigDecimal.valueOf(10000)));
-        accounts.put(2, new Account(2,1, BigDecimal.valueOf(20000)));
-        accounts.put(3, new Account(3,1, BigDecimal.valueOf(30000)));
+        accounts.put(1, new Account(1,1, BigDecimal.valueOf(1000)));
+        accounts.put(2, new Account(2,1, BigDecimal.valueOf(10)));
+        accounts.put(3, new Account(3,1, BigDecimal.valueOf(1000)));
+        accounts.put(4, new Account(4,1, BigDecimal.valueOf(10)));
     }
 
     @Override

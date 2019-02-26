@@ -94,20 +94,21 @@ public class Main {
             Account account = new Gson().fromJson(request.body(), Account.class);
             accountController.createAccount(account);
             response.status(201);
-            return new Gson().toJson(new StandardResponse("SUCCESS"));
+            return new Gson().toJson(new StandardResponse("SUCCESS", new Gson().toJsonTree(accountController.getAccount(account.getAccountId()))));
         });
 
         // Deposit account
-//        put("/accounts/:accountId/deposit/:amount", (request, response) -> {
-//            response.type("application/json");
-//            accountController.deposit(Integer.valueOf(request.params(":accountId")), new BigDecimal(request.params(":amount")));
-////            response.status(201);
-//            return new Gson().toJson(new StandardResponse("SUCCESS"));
-//        });
+        put("/accounts/:accountId/deposit/:amount", (request, response) -> {
+            System.out.println(Thread.currentThread().getName()+" put /accounts/:accountId/deposit/:amount");
+            response.type("application/json");
+            accountController.deposit(Integer.valueOf(request.params(":accountId")), new BigDecimal(request.params(":amount")));
+
+            return new Gson().toJson(new StandardResponse("SUCCESS", new Gson().toJsonTree(accountController.getAccount(Integer.valueOf(request.params(":accountId"))))));
+        });
 
         // Make transfer
         post("/accounts/transfer", (request, response) -> {
-            System.out.println("post /accounts/transfer request");
+            System.out.println(Thread.currentThread().getName()+" post /accounts/transfer request");
             response.type("application/json");
             TransferData transferData = new Gson().fromJson(request.body(), TransferData.class);
             try {
