@@ -1,4 +1,4 @@
-package com.victorbarca.rbtapp;
+package com.victorbarca.rbtapp.data;
 
 import com.google.gson.JsonElement;
 

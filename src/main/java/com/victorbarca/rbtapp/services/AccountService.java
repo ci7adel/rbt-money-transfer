@@ -4,6 +4,7 @@ import com.victorbarca.rbtapp.data.Account;
 import com.victorbarca.rbtapp.data.TransferData;
 
 import java.math.BigDecimal;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Objects;
 
@@ -19,17 +20,24 @@ public class AccountService implements IAccountService {
     }
 
     @Override
-    public Account getAccount(Integer accountId) {
-        return accounts.get(accountId);
+    public Account getAccount(Integer accountId) throws Exception {
+        if (accounts.containsKey(accountId))
+            return accounts.get(accountId);
+        else throw new Exception("Account not found");
     }
 
     @Override
     public void createAccount(Account account) {
+        account.setBalance(BigDecimal.ZERO); // Account balance just created must be 0
         this.accounts.put(account.getAccountId(), account);
     }
 
     @Override
-    public void deleteAccount(Integer accountId) {}
+    public void deleteAccount(Integer accountId) throws Exception {
+        if (accounts.containsKey(accountId))
+            this.accounts.remove(accountId);
+        else throw new Exception("Account not found");
+    }
 
     @Override
     public void updateAccount(Account account) {}
@@ -85,5 +93,10 @@ public class AccountService implements IAccountService {
                 throw e;
             }
         }
+    }
+
+    @Override
+    public Collection<Account> getAccounts() {
+        return this.accounts.values();
     }
 }
