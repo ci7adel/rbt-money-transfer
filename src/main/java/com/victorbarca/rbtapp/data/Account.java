@@ -42,17 +42,6 @@ public class Account {
         this.balance = balance;
     }
 
-    public void substractAmount(BigDecimal amount) {
-        try {
-            System.out.println(Thread.currentThread().getName() +" "+this.accountId + " sleep");
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        this.balance = this.balance.subtract(amount);
-        System.out.println(Thread.currentThread().getName() +" "+this.accountId + " finnish");
-    }
-
     public void addAmount(BigDecimal amount) {
         this.balance = this.balance.add(amount);
     }
