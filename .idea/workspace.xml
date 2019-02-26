@@ -7,15 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acf18a71-73ef-47e9-b5b2-6449056342fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/AccountController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/data/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/data/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/IAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/IAccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/testAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testAPI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,8 +44,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="326">
-                  <caret line="94" column="35" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
+                <state relative-caret-position="418">
+                  <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -157,8 +150,8 @@
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="FIRST">
-                  <first_editor relative-caret-position="209">
-                    <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+                  <first_editor relative-caret-position="140">
+                    <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
                   </first_editor>
                   <second_editor />
                 </state>
@@ -308,7 +301,7 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="rbt-moneytransfer" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551209674365" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551209761728" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/RBT_MoneyTransfer_jar/RBT-MoneyTransfer.jar" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -439,7 +432,7 @@
       <workItem from="1551132137231" duration="7655000" />
       <workItem from="1551141571259" duration="62000" />
       <workItem from="1551204648612" duration="3870000" />
-      <workItem from="1551208566405" duration="1080000" />
+      <workItem from="1551208566405" duration="1322000" />
     </task>
     <task id="LOCAL-00001" summary="readme">
       <created>1550886562353</created>
@@ -483,7 +476,21 @@
       <option name="project" value="LOCAL" />
       <updated>1551141621683</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added controller to separate concerns">
+      <created>1551209726949</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1551209726949</updated>
+    </task>
+    <task id="LOCAL-00008" summary="update README">
+      <created>1551209759353</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1551209759353</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -519,7 +526,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61781000" />
+    <option name="totallyTimeSpent" value="62023000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -577,7 +584,9 @@
     <MESSAGE value="added transactions support" />
     <MESSAGE value="synchronous transfers support" />
     <MESSAGE value="test suite" />
-    <option name="LAST_COMMIT_MESSAGE" value="test suite" />
+    <MESSAGE value="Added controller to separate concerns" />
+    <MESSAGE value="update README" />
+    <option name="LAST_COMMIT_MESSAGE" value="update README" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -734,23 +743,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="209">
-            <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="94" column="35" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
+        <state relative-caret-position="506">
+          <caret line="118" column="37" selection-start-line="118" selection-start-column="37" selection-end-line="118" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="140">
+            <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
