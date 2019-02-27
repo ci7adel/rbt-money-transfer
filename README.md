@@ -17,7 +17,8 @@ being able to change a database endpoint, for example, without affecting the res
 As the requirement "3. Assume the API is invoked by multiple systems and services on behalf of end users" states, 
 the API is particularly focused on the "transfer" method, allowing **concurrent calls** from different requests 
 "locking" pairs of accounts every time a request is being processed to not create inconsistent states and loss of funds.
-This is done locking the accounts always in the same order to avoid "deadlocks".
+This is done locking the accounts always in the same order to avoid "deadlocks". Two request involving 2 pairs of 
+different accounts can be processed in parallel.
 
 
 ## Data Model
@@ -65,7 +66,7 @@ The server now is running in `http://localhost:8080`
 ```json
 {
     "accountId": 1,
-    "userId": 1,
+    "userId": 1
 }
 ```
       
@@ -96,27 +97,25 @@ The server now is running in `http://localhost:8080`
 }
 ```
 ## Testing API
-Testing the API can be done running the test units included with the source code using Maven.
-I used REST-Assured to test and validate the response of the API in a easy way. 
+I tested the API with curl commands. Scripts are included in `/scr/test/scripts`.
 
-To run these tests is necessary Maven:
+Also, some test units are provided  to show the facilities of **REST-Assured** to test and validate the response of the API in a easy way. 
+To run these tests is necessary Maven: `mvn test`
 
-`mvn test`
 
-Or can be done using CURL or PostMan:
+### Test cases:
 
-### Make a transfer
+`test_normal_user_journey` : Normal user test case where two users open accounts, fund an account and make a transfer between accounts.
 
-`curl -d '{"accountIdFrom": 1, "accountIdTo": 2,"amount": 500}' -H "Content-Type: application/json" -X POST http://localhost:8080/accounts/transfer`
+`test_concurrency_lock` : Script to demonstrate that the API can process requests independently and concurrently.  
+Two request involving 2 pairs of different accounts can be processed in parallel.
 
-### Get info of an existing account
+`test_concurrency_stress` : Three files to run in separate terminals to simulate multiple transfers requests.
+At the end of the tests all accounts should show the same balance as the beginning, proving that there was 
+no losses of funds between request under the stress test.
 
-`curl -i http://localhost:8080/accounts/1`
-
-### Deposit fund into an account
-
-`curl -i -X PUT http://localhost:8080/accounts/1/deposit/1`
 
 ## ToDo:
 - Testing
 - Block remove used user 
+- change hash map
