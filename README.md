@@ -27,7 +27,7 @@ A very simple data model for this API was created to be able to "play" and simul
 The model consists in two entities **User** and **Account** with a relation "1 to Many". The API is consistent with this model
 providing the logic to maintain this relationship. 
 
-### Run server
+## Run server
 
 With the code and test cases is provided a JAR artifact where all the dependencies are included. So no need of installation of any additional software to run the server as a standalone program.
 
@@ -35,7 +35,7 @@ Run command `java -jar RBT-MoneyTransfer-1.0-SNAPSHOT.jar`
 
 The server now is running in `http://localhost:8080`
 
-### Routes
+## Routes
 
 **`POST /users`** Create user
 
