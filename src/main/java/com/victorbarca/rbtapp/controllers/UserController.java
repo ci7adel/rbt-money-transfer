@@ -20,9 +20,9 @@ public class UserController {
     }
 
     public void deleteUser(Integer userId) throws Exception {
-        if (userService.userExists(userId))
+        if (userService.userExists(userId) && !userService.hasAccounts(userId))
             userService.deleteUser(userId);
-        else throw new Exception("User not found");
+        else throw new Exception("User not found or with accounts");
     }
 
     public void updateUser(User user) throws Exception {
@@ -38,4 +38,6 @@ public class UserController {
     public boolean userExists(Integer userId) {
         return userService.userExists(userId);
     }
+
+
 }

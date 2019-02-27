@@ -14,4 +14,6 @@ public interface IUsersService {
     void updateUser(User user);
 
     Collection<User> getUsers();
+
+    boolean hasAccounts(Integer userId);
 }

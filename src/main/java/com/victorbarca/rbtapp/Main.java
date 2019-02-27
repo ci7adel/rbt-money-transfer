@@ -26,7 +26,6 @@ public class Main {
         UserController userController = new UserController();
         AccountController accountController = new AccountController(userController);
 
-
         // Get Server status
         get("/", (request, response) -> {
             response.type("text/html");
@@ -94,7 +93,7 @@ public class Main {
                 userController.deleteUser(Integer.valueOf(request.params(":id")));
                 return new Gson().toJson(new StandardResponse("SUCCESS"));
             } catch (Exception e) {
-                response.status(404); //Todo: check if really not found
+                response.status(404);
                 return new Gson().toJson(new StandardResponse("ERROR", e.getMessage()));
             }
         });
@@ -122,7 +121,7 @@ public class Main {
                         new StandardResponse("SUCCESS", new Gson()
                                 .toJsonTree(accountController.getAccount(Integer.valueOf(request.params(":id"))))));
             } catch (Exception e) {
-                response.status(404); // Not Found Todo: be sure is not found
+                response.status(404);
                 return new Gson().toJson(new StandardResponse("ERROR", e.getMessage()));
             }
         });
@@ -147,7 +146,7 @@ public class Main {
                 accountController.deleteAccount(Integer.valueOf(request.params(":id")));
                 return new Gson().toJson(new StandardResponse("SUCCESS"));
             } catch (Exception e) {
-                response.status(404); //Todo: check if really not found
+                response.status(404);
                 return new Gson().toJson(new StandardResponse("ERROR", e.getMessage()));
             }
         });

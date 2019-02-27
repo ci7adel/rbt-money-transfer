@@ -40,4 +40,9 @@ public class UserService implements IUsersService{
     public Collection<User> getUsers() {
         return dataBase.users.values();
     }
+
+    @Override
+    public boolean hasAccounts(Integer userId) {
+        return dataBase.accounts.values().stream().anyMatch(account -> account.getUserId().equals(userId));
+    }
 }

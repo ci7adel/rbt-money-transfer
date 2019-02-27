@@ -7,16 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acf18a71-73ef-47e9-b5b2-6449056342fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/scripts/test_concurrency_lock.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scripts/test_concurrency_stress_1.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scripts/test_concurrency_stress_2.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scripts/test_concurrency_stress_3.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/data/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/data/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scripts/curl.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scripts/test_normal_user_journey.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/IUsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/IUsersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/testAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scripts/test_concurrency_lock.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scripts/test_concurrency_lock.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scripts/test_concurrency_stress_1.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scripts/test_concurrency_stress_1.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scripts/test_concurrency_stress_2.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scripts/test_concurrency_stress_2.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scripts/test_concurrency_stress_3.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scripts/test_concurrency_stress_3.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scripts/test_normal_user_journey.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scripts/test_normal_user_journey.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,10 +56,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/data/Account.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+            <state relative-caret-position="183">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
               <folding>
+                <element signature="e#534#535#0" expanded="true" />
                 <element signature="e#576#577#0" expanded="true" />
+                <element signature="e#639#640#0" expanded="true" />
                 <element signature="e#684#685#0" expanded="true" />
                 <element signature="e#720#721#0" expanded="true" />
                 <element signature="e#758#759#0" expanded="true" />
@@ -69,8 +74,50 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/AccountController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
+            <state relative-caret-position="391">
               <caret line="75" column="71" lean-forward="true" selection-start-line="75" selection-start-column="71" selection-end-line="75" selection-end-column="71" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/scripts/test_normal_user_journey.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="29" column="32" lean-forward="true" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/IUsersService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/data/DataBase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,17 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scripts/test_concurrency_lock.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scripts/test_normal_user_journey.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+            <state relative-caret-position="368">
+              <caret line="16" column="48" lean-forward="true" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -99,8 +137,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scripts/test_concurrency_stress_1.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="299">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -108,8 +146,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scripts/test_concurrency_stress_2.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="184">
+              <caret line="8" column="106" lean-forward="true" selection-start-line="8" selection-start-column="106" selection-end-line="8" selection-end-column="106" />
             </state>
           </provider>
         </entry>
@@ -117,46 +155,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scripts/test_concurrency_stress_3.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="358">
-                <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#267#268#0" expanded="true" />
-                <element signature="e#321#322#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/data/DataBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="276">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -182,6 +182,7 @@
       <find>accountControllerservci</find>
       <find>user</find>
       <find>th</find>
+      <find>TODO</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -209,27 +210,27 @@
         <option value="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/IAccountService.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/data/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/IUsersService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/data/Account.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/data/Singleton.java" />
         <option value="$PROJECT_DIR$/src/test/scripts/curl.sh" />
         <option value="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/AccountService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/UserService.java" />
-        <option value="$PROJECT_DIR$/src/test/java/api/testAPI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/data/DataBase.java" />
         <option value="$PROJECT_DIR$/src/test/scripts/stress.sh" />
         <option value="$PROJECT_DIR$/src/test/scripts/stress3.sh" />
         <option value="$PROJECT_DIR$/src/test/scripts/stress2.sh" />
-        <option value="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/AccountController.java" />
         <option value="$PROJECT_DIR$/src/test/scripts/test1.sh" />
+        <option value="$PROJECT_DIR$/src/test/scripts/test_concurrency_stress_1.sh" />
         <option value="$PROJECT_DIR$/src/test/scripts/test_concurrency_stress_2.sh" />
         <option value="$PROJECT_DIR$/src/test/scripts/test_concurrency_stress_3.sh" />
-        <option value="$PROJECT_DIR$/src/test/scripts/test_normal_user_journey.sh" />
         <option value="$PROJECT_DIR$/src/test/scripts/test_concurrency_lock.sh" />
-        <option value="$PROJECT_DIR$/src/test/scripts/test_concurrency_stress_1.sh" />
+        <option value="$PROJECT_DIR$/src/test/java/api/testAPI.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/IUsersService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/data/DataBase.java" />
+        <option value="$PROJECT_DIR$/src/test/scripts/test_normal_user_journey.sh" />
       </list>
     </option>
   </component>
@@ -288,7 +289,64 @@
               <item name="RBT-MoneyTransfer" type="b2602c69:ProjectViewProjectNode" />
               <item name="RBT-MoneyTransfer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RBT-MoneyTransfer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RBT-MoneyTransfer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rbtapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RBT-MoneyTransfer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RBT-MoneyTransfer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rbtapp" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RBT-MoneyTransfer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RBT-MoneyTransfer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rbtapp" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RBT-MoneyTransfer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RBT-MoneyTransfer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rbtapp" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RBT-MoneyTransfer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RBT-MoneyTransfer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RBT-MoneyTransfer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RBT-MoneyTransfer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RBT-MoneyTransfer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RBT-MoneyTransfer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RBT-MoneyTransfer" type="b2602c69:ProjectViewProjectNode" />
@@ -310,7 +368,7 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="rbt-moneytransfer" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551306495154" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551311006527" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/RBT_MoneyTransfer_jar/RBT-MoneyTransfer.jar" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -366,7 +424,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testAPI.test_api_1_create_account" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="testAPI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RBT-MoneyTransfer" />
       <extension name="coverage">
         <pattern>
@@ -376,8 +434,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="api" />
       <option name="MAIN_CLASS_NAME" value="api.testAPI" />
-      <option name="METHOD_NAME" value="test_api_1_create_account" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -417,10 +474,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Bash.stress.sh" />
-        <item itemvalue="JUnit.testAPI.test_api_create_account" />
+        <item itemvalue="JUnit.testAPI" />
         <item itemvalue="JUnit.testAPI.test_api_transfer" />
-        <item itemvalue="JUnit.testAPI.test_api_1_create_account" />
+        <item itemvalue="JUnit.testAPI.test_api_create_account" />
+        <item itemvalue="Bash.stress.sh" />
       </list>
     </recent_temporary>
   </component>
@@ -447,7 +504,7 @@
       <workItem from="1551204648612" duration="3870000" />
       <workItem from="1551208566405" duration="3697000" />
       <workItem from="1551213096749" duration="13061000" />
-      <workItem from="1551298068461" duration="7414000" />
+      <workItem from="1551298068461" duration="11939000" />
     </task>
     <task id="LOCAL-00001" summary="readme">
       <created>1550886562353</created>
@@ -547,28 +604,31 @@
       <option name="project" value="LOCAL" />
       <updated>1551298136819</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="test scripts">
+      <created>1551306462577</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1551306462577</updated>
+    </task>
+    <task id="LOCAL-00016" summary="update README">
+      <created>1551306478628</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1551306478628</updated>
+    </task>
+    <task id="LOCAL-00017" summary="update README">
+      <created>1551306566420</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1551306566420</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="testAPI_test_api_1_create_account - 2019.02.26 at 00h 25m 51s.xml">
-      <configuration name="testAPI.test_api_1_create_account" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testAPI_test_api_1_create_account - 2019.02.26 at 18h 49m 28s.xml">
-      <configuration name="testAPI.test_api_1_create_account" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testAPI_test_api_1_create_account - 2019.02.26 at 18h 49m 49s.xml">
-      <configuration name="testAPI.test_api_1_create_account" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testAPI_test_api_1_create_account - 2019.02.26 at 18h 50m 57s.xml">
-      <configuration name="testAPI.test_api_1_create_account" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testAPI_test_api_1_create_account - 2019.02.26 at 18h 51m 37s.xml">
-      <configuration name="testAPI.test_api_1_create_account" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testAPI_test_api_transfer - 2019.02.26 at 19h 19m 40s.xml">
-      <configuration name="testAPI.test_api_transfer" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="testAPI_test_api_create_account - 2019.02.26 at 23h 56m 54s.xml">
       <configuration name="testAPI.test_api_create_account" configurationId="JUnit" />
     </history-entry>
@@ -581,9 +641,27 @@
     <history-entry file="testAPI_test_api_create_account - 2019.02.26 at 23h 58m 27s.xml">
       <configuration name="testAPI.test_api_create_account" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="testAPI_test_api_create_account - 2019.02.27 at 23h 22m 44s.xml">
+      <configuration name="testAPI.test_api_create_account" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testAPI - 2019.02.27 at 23h 23m 52s.xml">
+      <configuration name="testAPI" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testAPI_test_api_create_account - 2019.02.27 at 23h 24m 22s.xml">
+      <configuration name="testAPI.test_api_create_account" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testAPI_test_api_transfer - 2019.02.27 at 23h 24m 31s.xml">
+      <configuration name="testAPI.test_api_transfer" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testAPI_test_api_transfer - 2019.02.27 at 23h 25m 35s.xml">
+      <configuration name="testAPI.test_api_transfer" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testAPI - 2019.02.27 at 23h 25m 53s.xml">
+      <configuration name="testAPI" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84873000" />
+    <option name="totallyTimeSpent" value="89398000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -608,7 +686,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49798658" weight="0.34969324" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49052477" visible="true" weight="0.34355828" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49530202" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49530202" weight="0.3997955" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932885" weight="0.3289855" />
@@ -645,8 +723,21 @@
     <MESSAGE value="update testing" />
     <MESSAGE value="add JAR to repository" />
     <MESSAGE value="add singleton" />
+    <MESSAGE value="test scripts" />
     <MESSAGE value="update README" />
     <option name="LAST_COMMIT_MESSAGE" value="update README" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/UserController.java</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -726,13 +817,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/IUsersService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/data/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -741,9 +825,29 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/TestController.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/api/testAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="414">
+            <caret line="18" selection-start-line="17" selection-end-line="18" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/AccountService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
+        <state relative-caret-position="230">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -751,30 +855,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/api/testAPI.java">
+    <entry file="jar://$PROJECT_DIR$/../Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/util/function/Predicate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="201">
+          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/UserController.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/sparkjava/spark-core/2.7.2/spark-core-2.7.2.jar!/spark/http/matching/RequestWrapper.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="342">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/sparkjava/spark-core/2.7.2/spark-core-2.7.2.jar!/spark/Request.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#267#268#0" expanded="true" />
+            <element signature="e#321#322#0" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#822#823#0" expanded="true" />
+            <element signature="e#879#880#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-314">
-          <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
+        <state relative-caret-position="-460">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -783,10 +904,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/data/Account.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+        <state relative-caret-position="183">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
           <folding>
+            <element signature="e#534#535#0" expanded="true" />
             <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#639#640#0" expanded="true" />
             <element signature="e#684#685#0" expanded="true" />
             <element signature="e#720#721#0" expanded="true" />
             <element signature="e#758#759#0" expanded="true" />
@@ -795,32 +918,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/UserService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/AccountController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+        <state relative-caret-position="391">
+          <caret line="75" column="71" lean-forward="true" selection-start-line="75" selection-start-column="71" selection-end-line="75" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#267#268#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/IUsersService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/data/DataBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/AccountController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="75" column="71" lean-forward="true" selection-start-line="75" selection-start-column="71" selection-end-line="75" selection-end-column="71" />
+        <state relative-caret-position="299">
+          <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -829,46 +957,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scripts/test_concurrency_lock.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scripts/test_normal_user_journey.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+        <state relative-caret-position="368">
+          <caret line="16" column="48" lean-forward="true" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scripts/test_concurrency_stress_1.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="299">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scripts/test_concurrency_stress_2.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="184">
+          <caret line="8" column="106" lean-forward="true" selection-start-line="8" selection-start-column="106" selection-end-line="8" selection-end-column="106" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scripts/test_concurrency_stress_3.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="276">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="358">
-            <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/src/test/scripts/test_normal_user_journey.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="29" column="32" lean-forward="true" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
         </state>
       </provider>
     </entry>
