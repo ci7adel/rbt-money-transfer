@@ -12,13 +12,13 @@ public class testAPI {
     test_api_create_account() {
         given()
                 .contentType("application/json")
-                .body("{\"accountId\" : 4, \"userId\" : 1, \"balance\" : 0}")
+                .body("{\"accountId\" : 5, \"userId\" : 1, \"balance\" : 0}")
                 .when()
                 .post("/accounts")
                 .then()
                 .statusCode(201);
 
-        get("/accounts/4").then().statusCode(200).body("data.accountId", equalTo(4),"data.balance" , equalTo(0));
+        get("/accounts/4").then().statusCode(200).body("data.accountId", equalTo(5),"data.balance" , equalTo(0));
     }
 
     @Test

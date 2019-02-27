@@ -6,20 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acf18a71-73ef-47e9-b5b2-6449056342fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/data/DataBase.java" afterDir="false" />
+    <list default="true" id="acf18a71-73ef-47e9-b5b2-6449056342fc" name="Default Changelist" comment="update README">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/TestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/data/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/data/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/data/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/data/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/IUsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/IUsersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scripts/curl.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scripts/curl.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/testAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testAPI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -154,14 +143,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="138">
-                <caret line="16" column="80" selection-start-line="16" selection-start-column="80" selection-end-line="16" selection-end-column="80" />
+              <first_editor relative-caret-position="345">
+                <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/api/testAPI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="641">
+              <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -249,7 +250,6 @@
         <option value="$PROJECT_DIR$/src/test/java/TestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/controllers/TestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/IAccountService.java" />
-        <option value="$PROJECT_DIR$/src/test/java/api/testAPI.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/data/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/IUsersService.java" />
@@ -263,6 +263,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/data/DataBase.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/victorbarca/rbtapp/services/UserService.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/test/java/api/testAPI.java" />
       </list>
     </option>
   </component>
@@ -368,7 +369,27 @@
               <item name="RBT-MoneyTransfer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RBT-MoneyTransfer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RBT-MoneyTransfer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RBT-MoneyTransfer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RBT-MoneyTransfer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RBT-MoneyTransfer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RBT-MoneyTransfer" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -385,7 +406,7 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="rbt-moneytransfer" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551224677723" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551227266449" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/RBT_MoneyTransfer_jar/RBT-MoneyTransfer.jar" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -425,19 +446,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.victorbarca.rbtapp.test" />
-      <module name="RBT-MoneyTransfer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.victorbarca.rbtapp.data.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="testAPI.test_api_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RBT-MoneyTransfer" />
       <extension name="coverage">
@@ -470,6 +478,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="testAPI.test_api_create_account" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RBT-MoneyTransfer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="api" />
+      <option name="MAIN_CLASS_NAME" value="api.testAPI" />
+      <option name="METHOD_NAME" value="test_api_create_account" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="testAPI.test_api_transfer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RBT-MoneyTransfer" />
       <extension name="coverage">
@@ -488,11 +512,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.testAPI.test_api_create_account" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.testAPI.test_api_transfer" />
         <item itemvalue="JUnit.testAPI.test_api_1_create_account" />
         <item itemvalue="JUnit.testAPI.test_api_1" />
-        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
@@ -518,7 +542,7 @@
       <workItem from="1551141571259" duration="62000" />
       <workItem from="1551204648612" duration="3870000" />
       <workItem from="1551208566405" duration="3697000" />
-      <workItem from="1551213096749" duration="11571000" />
+      <workItem from="1551213096749" duration="13061000" />
     </task>
     <task id="LOCAL-00001" summary="readme">
       <created>1550886562353</created>
@@ -597,22 +621,24 @@
       <option name="project" value="LOCAL" />
       <updated>1551217286266</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add singleton">
+      <created>1551224701361</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1551224701361</updated>
+    </task>
+    <task id="LOCAL-00013" summary="update README">
+      <created>1551224725636</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1551224725636</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="testAPI_test_api_1 - 2019.02.26 at 00h 24m 09s.xml">
-      <configuration name="testAPI.test_api_1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testAPI_test_api_1_create_account - 2019.02.26 at 00h 24m 24s.xml">
-      <configuration name="testAPI.test_api_1_create_account" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testAPI_test_api_1_create_account - 2019.02.26 at 00h 24m 45s.xml">
-      <configuration name="testAPI.test_api_1_create_account" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testAPI_test_api_1_create_account - 2019.02.26 at 00h 25m 09s.xml">
-      <configuration name="testAPI.test_api_1_create_account" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="testAPI_test_api_1_create_account - 2019.02.26 at 00h 25m 51s.xml">
       <configuration name="testAPI.test_api_1_create_account" configurationId="JUnit" />
     </history-entry>
@@ -631,9 +657,21 @@
     <history-entry file="testAPI_test_api_transfer - 2019.02.26 at 19h 19m 40s.xml">
       <configuration name="testAPI.test_api_transfer" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="testAPI_test_api_create_account - 2019.02.26 at 23h 56m 54s.xml">
+      <configuration name="testAPI.test_api_create_account" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testAPI_test_api_create_account - 2019.02.26 at 23h 57m 22s.xml">
+      <configuration name="testAPI.test_api_create_account" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testAPI_test_api_create_account - 2019.02.26 at 23h 57m 56s.xml">
+      <configuration name="testAPI.test_api_create_account" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testAPI_test_api_create_account - 2019.02.26 at 23h 58m 27s.xml">
+      <configuration name="testAPI.test_api_create_account" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75969000" />
+    <option name="totallyTimeSpent" value="77459000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -648,8 +686,8 @@
     <frame x="-7" y="-7" width="2062" height="1136" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7990581" visible="true" weight="0.18481518" />
-      <window_info id="Structure" order="1" sideWeight="0.20094192" side_tool="true" visible="true" weight="0.18481518" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.799591" visible="true" weight="0.18481518" />
+      <window_info id="Structure" order="1" sideWeight="0.200409" side_tool="true" visible="true" weight="0.18481518" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -657,7 +695,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.4580777" side_tool="true" weight="0.18831168" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49798658" weight="0.34969324" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49052477" visible="true" weight="0.34867075" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49052477" weight="0.34867075" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49530202" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -692,10 +730,11 @@
     <MESSAGE value="synchronous transfers support" />
     <MESSAGE value="test suite" />
     <MESSAGE value="Added controller to separate concerns" />
-    <MESSAGE value="update README" />
     <MESSAGE value="update testing" />
     <MESSAGE value="add JAR to repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="add JAR to repository" />
+    <MESSAGE value="add singleton" />
+    <MESSAGE value="update README" />
+    <option name="LAST_COMMIT_MESSAGE" value="update README" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -748,16 +787,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/api/testAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -932,10 +961,20 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="138">
-            <caret line="16" column="80" selection-start-line="16" selection-start-column="80" selection-end-line="16" selection-end-column="80" />
+          <first_editor relative-caret-position="345">
+            <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/api/testAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="641">
+          <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

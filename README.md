@@ -28,21 +28,73 @@ providing the logic to maintain this relationship.
 
 ### Run server
 
-With the code and test cases is provided a JAR artifact where all the dependencies are included. 
-So no need of installation of any additional software to run the server as a standalone program.
+With the code and test cases is provided a JAR artifact where all the dependencies are included. So no need of installation of any additional software to run the server as a standalone program.
 
 Run command `java -jar RBT-MoneyTransfer-1.0-SNAPSHOT.jar`
 
+The server now is running in `http://localhost:8080`
+
 ### Routes
 
-`GET /accounts/:id`
-
-`POST /accounts/transfer` sending the transfer object:
+**`POST /users`** Create user
 
 ```json
-{"accountIdFrom": 1,"accountIdTo": 2,"amount": 500}
+{
+    "iserId": 1,
+    "name": "Victor"
+}
 ```
 
+**`GET /users/{id}`** Get user by id
+               
+**`GET /users`** Get all users
+          
+**`PUT /users`** Update user
+
+```json
+{
+    "iserId": 1,
+    "name": "Victor"
+}
+```
+                
+**`DELETE /users/{id}`** Delete user bt id
+    
+**`POST /accounts`** Create account
+
+```json
+{
+    "accountId": 1,
+    "userId": 1,
+}
+```
+      
+**`GET /accounts/{id}`** Get account by id
+        
+**`GET /accounts`** Get all accounts
+
+**`PUT /accounts`** Update account
+
+```json
+{
+    "accountId": 1,
+    "userId": 1
+}
+```
+          
+**`DELETE /accounts/{id}`** Delete account
+              
+**`PUT /accounts/{Id}/deposit/{amount}`** Deposit account
+          
+**`POST /accounts/transfer`** Make transfer:
+
+```json
+{
+    "accountIdFrom": 1,
+    "accountIdTo": 2,
+    "amount": 500
+}
+```
 ## Testing API
 Testing the API can be done running the test units included with the source code using Maven.
 I used REST-Assured to test and validate the response of the API in a easy way. 
