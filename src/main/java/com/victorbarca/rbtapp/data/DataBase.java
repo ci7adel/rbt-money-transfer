@@ -17,10 +17,10 @@ public class DataBase
         this.users.put(1,new User(1,"Victor"));
 
         accounts = new HashMap<>();
-        accounts.put(1, new Account(1,1, BigDecimal.valueOf(1000)));
-        accounts.put(2, new Account(2,1, BigDecimal.valueOf(10)));
-        accounts.put(3, new Account(3,1, BigDecimal.valueOf(1000)));
-        accounts.put(4, new Account(4,1, BigDecimal.valueOf(10)));
+        accounts.put(1, new Account(1,1, BigDecimal.valueOf(100)));
+        accounts.put(2, new Account(2,1, BigDecimal.valueOf(100)));
+        accounts.put(3, new Account(3,1, BigDecimal.valueOf(100)));
+        accounts.put(4, new Account(4,1, BigDecimal.valueOf(100)));
 
     }
 

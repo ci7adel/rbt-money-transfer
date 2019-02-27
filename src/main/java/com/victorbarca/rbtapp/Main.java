@@ -11,7 +11,6 @@ import com.victorbarca.rbtapp.data.Account;
 import com.victorbarca.rbtapp.data.StandardResponse;
 import com.victorbarca.rbtapp.data.TransferData;
 import com.victorbarca.rbtapp.data.User;
-import com.victorbarca.rbtapp.services.UserService;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
@@ -24,8 +23,6 @@ public class Main {
     public static void main (String[] args) {
         port(8080);
         // Dependencies Todo: dependency injector
-//        UserService userService = new UserService();
-//        AccountService accountService = new AccountService();
         UserController userController = new UserController();
         AccountController accountController = new AccountController(userController);
 
@@ -63,8 +60,6 @@ public class Main {
             }
         });
 
-
-
         // Get all users
         get("/users", (request, response) -> {
             try{
@@ -81,7 +76,7 @@ public class Main {
         // Update users
         put("/users", (request, response) -> {
             try{
-                System.out.println(Thread.currentThread().getName()+" put /users");
+                System.out.println("[Thread "+Thread.currentThread().getName()+"] put /users");
                 response.type("application/json");
                 User user = new Gson().fromJson(request.body(), User.class);
                 userController.updateUser(user);
@@ -160,7 +155,7 @@ public class Main {
         // Update account
         put("/accounts", (request, response) -> {
             try{
-                System.out.println(Thread.currentThread().getName()+" put /accounts");
+                System.out.println("[Thread "+Thread.currentThread().getName()+"] put /accounts");
                 response.type("application/json");
                 Account account = new Gson().fromJson(request.body(), Account.class);
                 accountController.updateAccount(account);
@@ -174,7 +169,7 @@ public class Main {
         // Deposit account
         put("/accounts/:accountId/deposit/:amount", (request, response) -> {
             try{
-                System.out.println(Thread.currentThread().getName()+" put /accounts/:accountId/deposit/:amount");
+                System.out.println("[Thread "+Thread.currentThread().getName()+"] put /accounts/:accountId/deposit/:amount");
                 response.type("application/json");
                 accountController.deposit(Integer.valueOf(request.params(":accountId")), new BigDecimal(request.params(":amount")));
                 return new Gson().toJson(new StandardResponse("SUCCESS", new Gson().toJsonTree(accountController.getAccount(Integer.valueOf(request.params(":accountId"))))));
@@ -186,7 +181,7 @@ public class Main {
 
         // Make transfer
         post("/accounts/transfer", (request, response) -> {
-            System.out.println(Thread.currentThread().getName()+" post /accounts/transfer request");
+            System.out.println("[Thread "+Thread.currentThread().getName()+"] post /accounts/transfer request");
             response.type("application/json");
             TransferData transferData = new Gson().fromJson(request.body(), TransferData.class);
             try {
@@ -199,6 +194,5 @@ public class Main {
                 return new Gson().toJson(new StandardResponse("ERROR", e.getMessage()));
             }
         });
-
     }
 }

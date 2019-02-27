@@ -73,16 +73,17 @@ public class AccountController {
                 try {
                     Account account1 = transferData.accountIdFrom < transferData.accountIdTo ? accountService.getAccount(transferData.accountIdFrom) : accountService.getAccount(transferData.accountIdTo);
                     Account account2 = transferData.accountIdFrom < transferData.accountIdTo ? accountService.getAccount(transferData.accountIdTo) : accountService.getAccount(transferData.accountIdFrom);
-                    System.out.println(Thread.currentThread().getName() + " locking account 1....");
+                    System.out.println("[Thread "+Thread.currentThread().getName() + "] Trying to lock account "+account1.getAccountId() +"....");
                     synchronized (account1) {
-                        System.out.println(Thread.currentThread().getName() + " account 1 LOCKED");
-                        System.out.println(Thread.currentThread().getName() + " locking account 2....");
+                        System.out.println("[Thread "+Thread.currentThread().getName() + "] Account "+account1.getAccountId() +" LOCKED");
+                        System.out.println("[Thread "+Thread.currentThread().getName() + "] Trying to lock account "+account2.getAccountId() +"....");
                         synchronized (account2) {
-                            System.out.println(Thread.currentThread().getName() + " account 2 LOCKED");
+                            System.out.println("[Thread "+Thread.currentThread().getName() + "] Account "+account2.getAccountId() +" LOCKED");
                             this.withdraw(transferData.accountIdFrom, transferData.amount);
-                            Thread.sleep(1000); // To simulate sending money
+                            System.out.println("[Thread "+Thread.currentThread().getName() + "] Sending money...");
+                            Thread.sleep(5000); // To simulate sending money
                             this.deposit(transferData.accountIdTo, transferData.amount);
-                            System.out.println(Thread.currentThread().getName() + " Transfer successful. " +
+                            System.out.println("[Thread "+Thread.currentThread().getName() + "] Transfer successful. " +
                                     "Balance account " + transferData.accountIdFrom + ": " + getBalance(transferData.accountIdFrom) +
                                     " Balance account " + transferData.accountIdTo + ": " + getBalance(transferData.accountIdTo)
                             );
