@@ -18,16 +18,16 @@ As the requirement "3. Assume the API is invoked by multiple systems and service
 the API is particularly focused on the "transfer" method, allowing **concurrent calls** from different requests 
 "locking" pairs of accounts every time a request is being processed to not create inconsistent states and loss of funds.
 This is done locking the accounts always in the same order to avoid "deadlocks". Two request involving 2 pairs of 
-different accounts can be processed in parallel.
+different accounts can be processed in parallel. A delay on 5 second was introduced between a withdraw and a deposit
+for transfers.
 
-
-## Data Model
+### Data Model
 
 A very simple data model for this API was created to be able to "play" and simulate a real world relation.
 The model consists in two entities **User** and **Account** with a relation "1 to Many". The API is consistent with this model
-providing the logic to maintain this relationship. 
+providing the logic to maintain this relationship. ConcurrentHashMap is used to deal with concurrent requests.
 
-## Run server
+### Run server
 
 With the code and test cases is provided a JAR artifact where all the dependencies are included. So no need of installation of any additional software to run the server as a standalone program.
 
@@ -35,7 +35,7 @@ Run command `java -jar RBT-MoneyTransfer-1.0-SNAPSHOT.jar`
 
 The server now is running in `http://localhost:8080`
 
-## Routes
+### Routes
 
 **`POST /users`** Create user
 
@@ -96,14 +96,21 @@ The server now is running in `http://localhost:8080`
     "amount": 500
 }
 ```
-## Testing API
+
+### Examples
+
+`curl -i http://localhost:8080/accounts` Get all account in the system
+
+`curl -i -X POST http://localhost:8080/accounts/transfer -d 
+'{"accountIdFrom": 1, "accountIdTo": 2,"amount": 50}' -H "Content-Type: application/json"` Make a transfer
+
+### Testing API
 I tested the API with curl commands. Scripts are included in `/scr/test/scripts`.
 
-Also, some test units are provided  to show the facilities of **REST-Assured** to test and validate the response of the API in a easy way. 
+Also, some test units are provided to show the benefits of **JUnit** and **REST-Assured** to test and validate the response of the API in a easy way. 
 To run these tests is necessary Maven: `mvn test`
 
-
-### Test cases:
+#### Test cases:
 
 `test_normal_user_journey` : Normal user test case where two users open accounts, fund an account and make a transfer between accounts.
 
@@ -111,11 +118,11 @@ To run these tests is necessary Maven: `mvn test`
 Two request involving 2 pairs of different accounts can be processed in parallel.
 
 `test_concurrency_stress` : Three files to run in separate terminals to simulate multiple transfers requests.
-At the end of the tests all accounts should show the same balance as the beginning, proving that there was 
-no losses of funds between request under the stress test.
+ Transfer account:  1 -> 2 -> 3 -> 1  
+At the end of the tests, doing `curl -i http://localhost:8080/accounts` all accounts should show the 
+same balance as the beginning, proving that there was no losses of funds between request under the stress test.
 
+`{"status":"SUCCESS","data":[{"accountId":1,"userId":1,"balance":100},{"accountId":2,"userId":1,"balance":100}
+,{"accountId":3,"userId":1,"balance":100},{"accountId":4,"userId":1,"balance":100}]}`
 
-## ToDo:
-- Testing
-- Block remove used user 
-- change hash map
+NOTE: It is necessary restart the server before run a test to recreate the data used in them.
