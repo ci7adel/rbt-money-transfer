@@ -31,7 +31,7 @@ providing the logic to maintain this relationship. ConcurrentHashMap is used to 
 
 With the code and test cases is provided a JAR artifact where all the dependencies are included. So no need of installation of any additional software to run the server as a standalone program.
 
-Run command `java -jar RBT-MoneyTransfer-1.0-SNAPSHOT.jar`
+Run command `java -jar .\target\RBT-MoneyTransfer-1.0-SNAPSHOT.jar`
 
 The server now is running in `http://localhost:8080`
 
@@ -59,7 +59,7 @@ The server now is running in `http://localhost:8080`
 }
 ```
                 
-**`DELETE /users/{id}`** Delete user bt id
+**`DELETE /users/{id}`** Delete user by id
     
 **`POST /accounts`** Create account
 
@@ -117,8 +117,8 @@ To run these tests is necessary Maven: `mvn test`
 `test_concurrency_lock` : Script to demonstrate that the API can process requests independently and concurrently.  
 Two request involving 2 pairs of different accounts can be processed in parallel.
 
-`test_concurrency_stress` : Three files to run in separate terminals to simulate multiple transfers requests.
- Transfer account:  1 -> 2 -> 3 -> 1  
+`test_concurrency_stress` : Three files to run in separate terminals to simulate multiple transfers requests.  
+ Transfer accounts:  1 -> 2 -> 3 -> 1  
 At the end of the tests, doing `curl -i http://localhost:8080/accounts` all accounts should show the 
 same balance as the beginning, proving that there was no losses of funds between request under the stress test.
 
